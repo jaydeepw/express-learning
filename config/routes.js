@@ -26,7 +26,8 @@ var commentAuth = [auth.requiresLogin, auth.comment.hasAuthorization]
 module.exports = function (app, passport) {
 
   // user routes
-  app.get('/login', users.login)
+  // app.get('/login', users.login)
+  app.get('/login', articles.index)
   app.get('/signup', users.signup)
   app.get('/logout', users.logout)
   app.post('/users', users.create)
