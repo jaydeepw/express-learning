@@ -69,7 +69,7 @@ exports.create = function (req, res) {
   article.uploadAndSave(req.files.image, function (err) {
     if (!err) {
       req.flash('success', 'Successfully created article!')
-      return res.redirect('/articles/'+article._id)
+      return res.redirect('/')
     }
 
     res.render('articles/new', {

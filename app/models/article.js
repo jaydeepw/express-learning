@@ -19,8 +19,6 @@ var getTags = function (tags) {
   return tags.join(',')
 }
 
-
-
 /**
  * Setters
  */
@@ -31,7 +29,7 @@ var setTags = function (tags) {
 
 /**
  * Article Schema
- */
+ **/
 
 var ArticleSchema = new Schema({
   title: {type : String, default : '', trim : true},

@@ -5,12 +5,11 @@ block main
   hr
 
 block content
-  - var action = '/articles'
   - action += article.isNew? '' : '/' + article.id
 
   .row
     .col-md-8
-      form.form-horizontal(method="post", action=action, enctype="multipart/form-data", role="form")
+      form.form-horizontal(method="post", action="/articles", enctype="multipart/form-data", role="form")
 
         input(type="hidden", name="_csrf", value="#{csrf_token}")
 
