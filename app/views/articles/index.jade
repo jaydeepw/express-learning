@@ -9,8 +9,9 @@ block content
       .article
         h3
           a(href='/articles/'+article._id, title=article.title) #{article.title}
+        h3
+          a(href='/articles/'+article._id, title=article.venue) #{article.venue}
         p= article.body
-
         .meta
           span.muted= formatDate(article.createdAt)
 

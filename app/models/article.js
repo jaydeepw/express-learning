@@ -19,6 +19,8 @@ var getTags = function (tags) {
   return tags.join(',')
 }
 
+
+
 /**
  * Setters
  */
@@ -45,7 +47,8 @@ var ArticleSchema = new Schema({
     cdnUri: String,
     files: []
   },
-  createdAt  : {type : Date, default : Date.now}
+  createdAt  : {type : Date, default : Date.now},
+  venue: {type : String, default : 'Akola', trim : true}
 })
 
 /**
@@ -128,6 +131,14 @@ ArticleSchema.methods = {
     })
 
     this.save(cb)
+  },
+
+  setVenue: function (venue) {
+    this.venue = venue;
+  },
+
+  getVenue: function () {
+    return venue;
   },
 
   /**
