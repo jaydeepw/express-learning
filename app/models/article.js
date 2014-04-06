@@ -48,7 +48,7 @@ var ArticleSchema = new Schema({
     files: []
   },
   createdAt  : {type : Date, default : Date.now},
-  venue: {type : String, default : 'Akola', trim : true}
+  venue: {type : String, default : 'Amsterdam', trim : true}
 })
 
 /**

@@ -91,12 +91,12 @@ module.exports = function (app, passport) {
   // article routes
   app.param('id', articles.load)
   app.get('/articles', articles.index)
-  app.get('/articles/new', auth.requiresLogin, articles.new)
-  app.post('/articles', auth.requiresLogin, articles.create)
+  app.get('/articles/new', articles.new)
+  app.post('/articles', articles.create)
   app.get('/articles/:id', articles.show)
   app.get('/articles/:id/edit', articleAuth, articles.edit)
   app.put('/articles/:id', articleAuth, articles.update)
-  app.del('/articles/:id', articleAuth, articles.destroy)
+  app.del('/articles/:id', articles.destroy)
 
   // home route
   app.get('/', articles.index)
